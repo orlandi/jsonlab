@@ -376,6 +376,7 @@ elseif (len == 0)
     else
         txt = Zmarker;
     end
+    return;
 end
 if (~strcmp(Amarker{1}, '['))
     am0 = Imsgpk_(dim(1), 220, 144, varargin{:});
@@ -394,6 +395,7 @@ end
 if (len > bracketlevel)
     txt = [txt Amarker{2}];
 end
+txt = sprintf('%s',txt{:});
 
 %% -------------------------------------------------------------------------
 function txt = struct2ubjson(name, item, level, varargin)
